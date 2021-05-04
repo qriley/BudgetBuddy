@@ -1,24 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import IncomeComp from './IncomeComponent.js'
+import ExpenseComp from './ExpenseComponent.js'
 
 function App() {
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Budget Buddy</h1>
+        <h3>...to help your finances!</h3>
       </header>
+      <div className="mainContent">
+        <IncomeComp />
+        <div className="additionalCards">
+          <ExpenseComp />
+        </div>
+        <button onClick={() => { alert("Clicked!")}}>Add Expense</button>
+      </div>
     </div>
   );
 }
