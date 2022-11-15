@@ -40,3 +40,12 @@
   padding: 20px;
   border-radius: 25px;
 }
+
+.incomeTotalCard {
+    height: 200px;
+    background-color: rgb(212, 112, 000);
+    margin: 2%;
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+}
