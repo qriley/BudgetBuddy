@@ -1,10 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 import IncomeComp from './IncomeComponent.js'
 import ExpenseComp from './ExpenseComponent.js'
 
 function App() {
+
+    const [components, setComponents] = useState(["Sample Component"]);
+
+    function addComponent() {
+
+        setComponents([...components, "Sample Component"])
+
+    }
 
 
   return (
@@ -15,10 +23,11 @@ function App() {
       </header>
       <div className="mainContent">
         <IncomeComp />
-        <div className="additionalCards">
-          <ExpenseComp />
-        </div>
-        <button onClick={() => { alert("Clicked!")}}>Add Expense</button>
+              <div className="additionalCards">
+                  {components.map((item, i) => (<ExpenseComp />)) }
+                  
+              </div>
+              <button onClick={addComponent }>Add Expense</button>
       </div>
     </div>
   );
