@@ -27,7 +27,11 @@ function App() {
                   {components.map((item, i) => (<ExpenseComp />)) }
                   
               </div>
-              <button onClick={addComponent }>Add Expense</button>
+              <button onClick={addComponent}>Add Expense</button>
+
+              <div className="incomeTotalCard">
+                  <h1 className="incomeTotalDisplay"></h1>
+               </div>
       </div>
     </div>
   );
