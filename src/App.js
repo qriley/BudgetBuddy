@@ -6,6 +6,7 @@ import ExpenseComp from './ExpenseComponent.js'
 
 function App() {
 
+    const total = 0;
     const [components, setComponents] = useState(["Sample Component"]);
 
     function addComponent() {
@@ -13,7 +14,9 @@ function App() {
         setComponents([...components, "Sample Component"])
 
     }
-
+    const updateTotal = (toAdd: number)=>{
+        total += toAdd
+    }
 
   return (
     <div className="App">
@@ -24,13 +27,13 @@ function App() {
       <div className="mainContent">
         <IncomeComp />
               <div className="additionalCards">
-                  {components.map((item, i) => (<ExpenseComp />)) }
+                  {components.map((item, i) => (<ExpenseComp parentFunction={updateTotal} />))}
                   
               </div>
               <button onClick={addComponent}>Add Expense</button>
 
               <div className="incomeTotalCard">
-                  <h1 className="incomeTotalDisplay"></h1>
+                  <h1 className="incomeTotalDisplay">${ total}</h1>
                </div>
       </div>
     </div>

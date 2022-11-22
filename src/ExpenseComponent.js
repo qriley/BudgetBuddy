@@ -4,6 +4,7 @@ class ExpenseComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            totalFunction: props.totalFunction,
             expense: 0,
             perMonth: 1,
             total: 0,
@@ -30,7 +31,9 @@ class ExpenseComponent extends React.Component {
     totalCalculator = (event) => {
         event.preventDefault();
         var calculateTotal = this.state.expense * this.state.perMonth;
-        this.setState({ total: calculateTotal.toFixed(2) });
+        this.setState({ total: calculateTotal.toFixed(2) 
+        });
+        this.state.totalFunction(this.props.total);
     }
 
     titleHandler = (event) => {
