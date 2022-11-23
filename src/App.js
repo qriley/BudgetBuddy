@@ -7,87 +7,92 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
+            income: .00,
+            expense: .00,
             total: .00,
             components: 1,
             rows: [<ExpenseComp key={this.components} totalFunction={this.updateTotal} />]
         }
 
     }
-    updateTotal = (toAdd,doNum) => {
-    console.log(toAdd)
-    console.log(this.state.total)
-    if (doNum== 0) {
-        var amount = Number(this.state.total) + Number(toAdd)
-        this.setState({ total: amount });
-        console.log(this.state.total)
-    }else {
-        var amount = Number(this.state.total) - Number(toAdd)
-        this.setState({ total: amount });
-        console.log(this.state.total)
+    updateTotal = (toAdd) => {
+        var ex = Number(this.state.expense) + Number(toAdd)
+
+        this.setState({ expense: ex });
+
+        var tot = Number(this.state.income) - Number(ex)
+
+        this.setState({ total: tot })
+
     }
-}
 
-addComponent = () => {
+    incomeTotal = (toAdd) => {
+        var tot = Number(toAdd) - Number(this.state.expense)
 
-    this.setState({ components: this.state.components++ });
-    var tempRows = this.state.rows
+        this.setState({ income: Number(toAdd), total:  tot})
+        
+    }
+    addComponent = () => {
 
-
-
-    // note: we are adding a key prop here to allow react to uniquely identify each
-    // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
-    tempRows.push(<ExpenseComp key={this.components} totalFunction={this.updateTotal} />);
-
-    this.setState({ rows: tempRows });
-}
+        this.setState({ components: this.state.components++ });
+        var tempRows = this.state.rows
 
 
-render() {
-    return (
-        <div className="App">
-            <header className="App-header">
-                <h1>Budget Buddy</h1>
-                <h3>...to help your finances!</h3>
-            </header>
-            <div className="mainContent">
-                <div className="leftCol">
-                    <IncomeComp totalFunction={this.updateTotal}/>
-                    <div className="additionalCards">
-                        {this.state.rows}
 
+        // note: we are adding a key prop here to allow react to uniquely identify each
+        // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
+        tempRows.push(<ExpenseComp key={this.components} totalFunction={this.updateTotal} />);
+
+        this.setState({ rows: tempRows });
+    }
+
+
+    render() {
+        return (
+            <div className="App">
+                <header className="App-header">
+                    <h1>Budget Buddy</h1>
+                    <h3>...to help your finances!</h3>
+                </header>
+                <div className="mainContent">
+                    <div className="leftCol">
+                        <IncomeComp incomeFunction={this.incomeTotal} />
+                        <div className="additionalCards">
+                            {this.state.rows}
+
+                        </div>
+                        <button onClick={this.addComponent}>Add Expense</button>
+
+                        <div className="incomeTotalCard">
+                            <h1 className="incomeTotalDisplay">${this.state.total}</h1>
+                        </div>
                     </div>
-                    <button onClick={this.addComponent}>Add Expense</button>
-
-                    <div className="incomeTotalCard">
-                        <h1 className="incomeTotalDisplay">${this.state.total}</h1>
+                    <div className="rightCol">
+                        <button className="stratCard">
+                            <h2>
+                                TEST
+                            </h2>
+                        </button>
+                        <button className="stratCard">
+                            <h2>
+                                TEST
+                            </h2>
+                        </button>
+                        <button className="stratCard">
+                            <h2>
+                                TEST
+                            </h2>
+                        </button>
+                        <button className="stratCard">
+                            <h2>
+                                TEST
+                            </h2>
+                        </button>
                     </div>
-                </div>
-                <div className="rightCol">
-                    <button className="stratCard">
-                        <h2>
-                            TEST
-                        </h2>
-                    </button>
-                    <button className="stratCard">
-                        <h2>
-                            TEST
-                        </h2>
-                    </button>
-                    <button className="stratCard">
-                        <h2>
-                            TEST
-                        </h2>
-                    </button>
-                    <button className="stratCard">
-                        <h2>
-                            TEST
-                        </h2>
-                    </button>
                 </div>
             </div>
-        </div>
-    );
-}
+        );
+    }
 
 }
 

@@ -12,11 +12,13 @@ class IncomeComponent extends React.Component {
         event.preventDefault();
         const re = /^[0-9\b]+$/;
         var inputVal = document.getElementById("input").value;
+        console.log(inputVal);
+        
         if (inputVal === '' || re.test(inputVal)) {
-            
-            this.setState({ income: inputVal });
+            var adder = Number(inputVal).toFixed(2)
+            this.setState({ income: adder });
 
-            this.props.totalFunction(this.state.income, 0);
+            this.props.incomeFunction(adder);
         }
         //document.getElementsByClassName("incomeTotalDisplay")[0].innerHTML = this.state.income;
 
