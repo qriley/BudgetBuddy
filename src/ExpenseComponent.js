@@ -1,15 +1,15 @@
 import React from 'react';
-
+import App from './App.js'
 class ExpenseComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            totalFunction: props.totalFunction,
             expense: 0,
             perMonth: 1,
             total: 0,
             title: "Description"
         };
+        //this.totalFunction = props.totalFunction;
     }
 
     myExpenseHandler = (event) => {
@@ -30,10 +30,15 @@ class ExpenseComponent extends React.Component {
 
     totalCalculator = (event) => {
         event.preventDefault();
-        var calculateTotal = this.state.expense * this.state.perMonth;
-        this.setState({ total: calculateTotal.toFixed(2) 
-        });
-        this.state.totalFunction(this.props.total);
+
+        const re = /^[0-9\b]+$/;
+        if (this.state.expense === '' || re.test(this.state.expense)) {
+            var calculateTotal = this.state.expense * this.state.perMonth;
+            this.setState({
+                total: calculateTotal.toFixed(2)
+            });
+            this.props.totalFunction(calculateTotal.toFixed(2), 1);
+        }
     }
 
     titleHandler = (event) => {

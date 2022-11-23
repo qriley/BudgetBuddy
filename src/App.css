@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: #bbb;
+  height: 100%;
 }
 
 .App-header {
@@ -23,13 +24,36 @@
   height: 100%;
 }
 
-.incomeCard{
+.leftCol {
+    background-color: #bbb;
+    width: 50%;
+    float: left;
+    height: 100%;
+}
 
-  height: 200px;
-  background-color: rgb(77, 212, 106);
-  margin: 2%;
-  padding: 20px;
-  border-radius: 25px;
+.rightCol {
+    background-color: #bbb;
+    width: 50%;
+    float: right;
+    height: 100%;
+}
+
+.stratCard {
+    height: 100px;
+    background-color: rgb(60, 60, 220);
+    margin: 2%;
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+    width: 90%;
+}
+
+.incomeCard {
+    height: 200px;
+    background-color: rgb(77, 212, 106);
+    margin: 2%;
+    padding: 20px;
+    border-radius: 25px;
 }
 
 .expenseCard{
