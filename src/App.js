@@ -61,34 +61,34 @@ class App extends Component {
                             {this.state.rows}
 
                         </div>
-                        <button onClick={this.addComponent}>Add Expense</button>
+                        <button className="addButton" onClick={this.addComponent}>+</button>
 
                         <div className="incomeTotalCard">
                             <h1 className="incomeTotalDisplay">${this.state.total}</h1>
                         </div>
                     </div>
-                    <div className="rightCol">
-                        <button className="stratCard">
-                            <h2>
-                                TEST
-                            </h2>
-                        </button>
-                        <button className="stratCard">
-                            <h2>
-                                TEST
-                            </h2>
-                        </button>
-                        <button className="stratCard">
-                            <h2>
-                                TEST
-                            </h2>
-                        </button>
-                        <button className="stratCard">
-                            <h2>
-                                TEST
-                            </h2>
-                        </button>
-                    </div>
+                    {/*<div className="rightCol">*/}
+                    {/*    <button className="stratCard">*/}
+                    {/*        <h2>*/}
+                    {/*            TEST*/}
+                    {/*        </h2>*/}
+                    {/*    </button>*/}
+                    {/*    <button className="stratCard">*/}
+                    {/*        <h2>*/}
+                    {/*            TEST*/}
+                    {/*        </h2>*/}
+                    {/*    </button>*/}
+                    {/*    <button className="stratCard">*/}
+                    {/*        <h2>*/}
+                    {/*            TEST*/}
+                    {/*        </h2>*/}
+                    {/*    </button>*/}
+                    {/*    <button className="stratCard">*/}
+                    {/*        <h2>*/}
+                    {/*            TEST*/}
+                    {/*        </h2>*/}
+                    {/*    </button>*/}
+                    {/*</div>*/}
                 </div>
             </div>
         );
