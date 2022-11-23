@@ -77,7 +77,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
   <tr>
     <th>- Investigate and fix updating issue.</th>
     <th>Critical</th>
-    <th>Planning</th>
+    <th>Done</th>
   </tr>
   <tr>
     <th>- Fix right col styling issue.</th>
@@ -85,8 +85,23 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
     <th>In Progress</th>
   </tr>
   <tr>
-    <th>-Build out strategies functions.</th>
+    <th>-Build out strategies functions. Sliders for each type?</th>
     <th>Normal</th>
     <th>planning</th>
+  </tr>
+    <tr>
+    <th>- Add debt bucket, with interest</th>
+    <th>low</th>
+    <th>Not Started</th>
+  </tr>
+    <tr>
+    <th>- income select for salary, hourly, monthy</th>
+    <th>low</th>
+    <th>Not Started</th>
+  </tr>
+    <tr>
+    <th>- accurate tax calculations</th>
+    <th>low</th>
+    <th>Not Started</th>
   </tr>
 </table>
