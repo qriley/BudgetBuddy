@@ -29,12 +29,12 @@ class IncomeComponent extends React.Component {
                 <form>
                     <h1>Determine your monthly income:</h1>
                     <p>Enter your monthly income after taxes:</p>
-                    <input
+                    <input className="form"
                         type='text'
                         id='input'
                     //onChange={this.myIncomeHandler}
                     />
-                    <button onClick={this.myIncomeHandler}>Confirm</button>
+                    <button className="form" onClick={this.myIncomeHandler}>Confirm</button>
                 </form>
             </div>
         );
