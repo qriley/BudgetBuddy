@@ -10,10 +10,15 @@ class IncomeComponent extends React.Component {
 
     myIncomeHandler = (event) => {
         event.preventDefault();
-        this.setState({ income: event.target.value });
+        const re = /^[0-9\b]+$/;
+        var inputVal = document.getElementById("input").value;
+        if (inputVal === '' || re.test(inputVal)) {
+            
+            this.setState({ income: inputVal });
 
-        
-        document.getElementsByClassName("incomeTotalDisplay")[0].innerHTML = this.state.income;
+            this.props.totalFunction(this.state.income, 0);
+        }
+        //document.getElementsByClassName("incomeTotalDisplay")[0].innerHTML = this.state.income;
 
     }
     render() {
@@ -24,7 +29,8 @@ class IncomeComponent extends React.Component {
                     <p>Enter your monthly income after taxes:</p>
                     <input
                         type='text'
-                        onChange={this.myIncomeHandler}
+                        id='input'
+                    //onChange={this.myIncomeHandler}
                     />
                     <button onClick={this.myIncomeHandler}>Confirm</button>
                 </form>

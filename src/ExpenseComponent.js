@@ -30,10 +30,15 @@ class ExpenseComponent extends React.Component {
 
     totalCalculator = (event) => {
         event.preventDefault();
-        var calculateTotal = this.state.expense * this.state.perMonth;
-        this.setState({ total: calculateTotal.toFixed(2) 
-        });
-        this.props.totalFunction(calculateTotal.toFixed(2));
+
+        const re = /^[0-9\b]+$/;
+        if (this.state.expense === '' || re.test(this.state.expense)) {
+            var calculateTotal = this.state.expense * this.state.perMonth;
+            this.setState({
+                total: calculateTotal.toFixed(2)
+            });
+            this.props.totalFunction(calculateTotal.toFixed(2), 1);
+        }
     }
 
     titleHandler = (event) => {
