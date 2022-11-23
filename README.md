@@ -84,6 +84,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
     <th>High</th>
     <th>In Progress</th>
   </tr>
+    <tr>
+    <th>- Add X to remove an expense tile</th>
+    <th>Normal</th>
+    <th>In Progress</th>
+  </tr>
   <tr>
     <th>-Build out strategies functions. Sliders for each type?</th>
     <th>Normal</th>
