@@ -55,7 +55,7 @@ class ExpenseComponent extends React.Component {
                 <form>
                     <h1>This'll cost yah...:</h1>
                     <p>Enter your expense:</p>
-                    <input className="form"
+                    <input className="form textFields"
                         type='text'
                         onChange={this.myExpenseHandler}
                     />
@@ -67,7 +67,7 @@ class ExpenseComponent extends React.Component {
                     </select>
                     <button className="form"  onClick={this.totalCalculator}>Confirm</button>
                     <p>Enter your description:</p>
-                    <input className="form"
+                    <input className="form textFields"
                         type='text'
                         onChange={this.titleHandler}
                     />
