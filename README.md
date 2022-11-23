@@ -86,7 +86,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
   </tr>
     <tr>
     <th>- Add X to remove an expense tile</th>
-    <th>Normal</th>
+    <th>High</th>
     <th>In Progress</th>
   </tr>
   <tr>
