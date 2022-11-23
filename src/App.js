@@ -90,6 +90,7 @@ class App extends Component {
                     {/*    </button>*/}
                     {/*</div>*/}
                 </div>
+                <a href="http://www.Quinn-Riley.com">This website was built, owned and ran by Quinn Riley. He can make a website for you too! www.Quinn-Riley.com</a>
             </div>
         );
     }
