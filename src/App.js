@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import './App.css';
 import IncomeComp from './IncomeComponent.js'
 import ExpenseComp from './ExpenseComponent.js'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 class App extends Component {
     constructor() {
         super();
@@ -11,7 +13,7 @@ class App extends Component {
             expense: .00,
             total: .00,
             components: 1,
-            rows: [<ExpenseComp key={this.components} totalFunction={this.updateTotal} />]
+            rows: [<ExpenseComp className="span10" key={this.components} totalFunction={this.updateTotal} />]
         }
 
     }
@@ -56,7 +58,7 @@ class App extends Component {
                 </header>
                 <div className="mainContent">
                     <div className="leftCol">
-                        <IncomeComp incomeFunction={this.incomeTotal} />
+                        <IncomeComp className="span10" incomeFunction={this.incomeTotal} />
                         <div className="additionalCards">
                             {this.state.rows}
 

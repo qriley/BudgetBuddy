@@ -1,5 +1,8 @@
 import React from 'react';
 import App from './App.js'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 class ExpenseComponent extends React.Component {
     constructor(props) {
         super(props);
