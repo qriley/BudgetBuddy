@@ -75,6 +75,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
     <th>Progress</th>
   </tr>
   <tr>
+      <tr>
+    <th>- Style with bootstrap</th>
+    <th>Normal</th>
+    <th>In Progress</th>
+  </tr>
     <th>- Investigate and fix updating issue.</th>
     <th>Critical</th>
     <th>Done</th>
