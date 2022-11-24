@@ -79,11 +79,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
     <th>- Style with bootstrap</th>
     <th>Normal</th>
     <th>In Progress</th>
-  </tr>
-    <th>- Investigate and fix updating issue.</th>
-    <th>Critical</th>
-    <th>Done</th>
-  </tr>
   <tr>
     <th>- Fix right col styling issue.</th>
     <th>High</th>
@@ -123,6 +118,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
     <th>- make cards collapseable displaying the description and total on thin strip</th>
     <th>normal</th>
     <th>Not Started</th>
+  </tr>
+    </tr>
+    <th>- Investigate and fix updating issue.</th>
+    <th>Critical</th>
+    <th>Done</th>
   </tr>
 
 </table>
