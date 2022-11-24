@@ -108,5 +108,17 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
     <th>- accurate tax calculations</th>
     <th>low</th>
     <th>Not Started</th>
+    <tr>
+    <th>- add animation on card add</th>
+    <th>normal</th>
+    <th>Not Started</th>
+
+    <tr>
+    <th>- make cards collapseable displaying the description and total on thin strip</th>
+    <th>normal</th>
+    <th>Not Started</th>
+  </tr>
+
+  </tr>
   </tr>
 </table>
