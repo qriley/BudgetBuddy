@@ -58,17 +58,19 @@ class ExpenseComponent extends React.Component {
                 <form>
                     <h1>This'll cost yah...:</h1>
                     <p>Enter your expense:</p>
-                    <input className="form textFields"
-                        type='text'
-                        onChange={this.myExpenseHandler}
-                    />
-                    <select className="form" defaultValue="1" onChange={this.perMonthHandler}>
-                        <option value="12">Yearly</option>
-                        <option value="1">Monthly</option>
-                        <option value="4">Weekly</option>
-                        <option value="30">Daily</option>
-                    </select>
-                    <button className="form"  onClick={this.totalCalculator}>Confirm</button>
+                    <div>
+                        <input className="form textFields"
+                            type='text'
+                            onChange={this.myExpenseHandler}
+                        />
+                        <select className="form" defaultValue="1" onChange={this.perMonthHandler}>
+                            <option value="12">Yearly</option>
+                            <option value="1">Monthly</option>
+                            <option value="4">Weekly</option>
+                            <option value="30">Daily</option>
+                        </select>
+                            <button className="form" onClick={this.totalCalculator}>Confirm</button>
+                        </div>
                     <p>Enter your description:</p>
                     <input className="form textFields"
                         type='text'

@@ -4,7 +4,8 @@ import './App.css';
 import IncomeComp from './IncomeComponent.js'
 import ExpenseComp from './ExpenseComponent.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
 class App extends Component {
     constructor() {
         super();
@@ -56,43 +57,48 @@ class App extends Component {
                     <h1>Budget Buddy</h1>
                     <h3>...to help your finances!</h3>
                 </header>
-                <div className="mainContent">
-                    <div className="leftCol">
-                        <IncomeComp className="span10" incomeFunction={this.incomeTotal} />
-                        <div className="additionalCards">
-                            {this.state.rows}
+                <div className="mainContent container">
+                    <div className="row">
+                        <div className="leftCol col-md-12">
+                            <IncomeComp incomeFunction={this.incomeTotal} />
+                            <div className="additionalCards">
+                                {this.state.rows}
 
-                        </div>
-                        <button className="addButton" onClick={this.addComponent}>+</button>
+                            </div>
+                            <button className="addButton" onClick={this.addComponent}>+</button>
 
-                        <div className="incomeTotalCard">
-                            <h1 className="incomeTotalDisplay">${this.state.total}</h1>
+                            <div className="incomeTotalCard">
+                                <h1 className="incomeTotalDisplay">${this.state.total}</h1>
+                            </div>
+                            <a href="http://www.Quinn-Riley.com">This website was built, owned and ran by Quinn Riley. He can make a website for you too! www.Quinn-Riley.com</a>
                         </div>
+                        {/*<div className="rightCol col-md-4">*/}
+                        {/*    <button className="stratCard">*/}
+                        {/*        <h2>*/}
+                        {/*            TEST*/}
+                        {/*        </h2>*/}
+                        {/*    </button>*/}
+                        {/*    <button className="stratCard">*/}
+                        {/*        <h2>*/}
+                        {/*            TEST*/}
+                        {/*        </h2>*/}
+                        {/*    </button>*/}
+                        {/*    <button className="stratCard">*/}
+                        {/*        <h2>*/}
+                        {/*            TEST*/}
+                        {/*        </h2>*/}
+                        {/*    </button>*/}
+                        {/*    <button className="stratCard">*/}
+                        {/*        <h2>*/}
+                        {/*            TEST*/}
+                        {/*        </h2>*/}
+                        {/*    </button>*/}
+                        {/*</div>*/}
                     </div>
-                    {/*<div className="rightCol">*/}
-                    {/*    <button className="stratCard">*/}
-                    {/*        <h2>*/}
-                    {/*            TEST*/}
-                    {/*        </h2>*/}
-                    {/*    </button>*/}
-                    {/*    <button className="stratCard">*/}
-                    {/*        <h2>*/}
-                    {/*            TEST*/}
-                    {/*        </h2>*/}
-                    {/*    </button>*/}
-                    {/*    <button className="stratCard">*/}
-                    {/*        <h2>*/}
-                    {/*            TEST*/}
-                    {/*        </h2>*/}
-                    {/*    </button>*/}
-                    {/*    <button className="stratCard">*/}
-                    {/*        <h2>*/}
-                    {/*            TEST*/}
-                    {/*        </h2>*/}
-                    {/*    </button>*/}
-                    {/*</div>*/}
+                        
+
                 </div>
-                <a href="http://www.Quinn-Riley.com">This website was built, owned and ran by Quinn Riley. He can make a website for you too! www.Quinn-Riley.com</a>
+               
             </div>
         );
     }
