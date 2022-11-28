@@ -11,7 +11,7 @@ class ExpenseComponent extends React.Component {
             perMonth: 1,
             total: 0,
             title: "Description",
-            isClosed: false
+            isClosed: true
         };
         //this.totalFunction = props.totalFunction;
     }
@@ -90,8 +90,8 @@ class ExpenseComponent extends React.Component {
         } else {
             card =
                 <div className="expenseClosed">
-                    <h2>{this.state.title}</h2>
-                    <h3 id="totalCost">${this.state.total}</h3>
+                    <p>{this.state.title}</p>
+                    <p id="totalCost">${this.state.total}</p>
                 </div>;
         }
 
