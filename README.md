@@ -78,11 +78,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
       <tr>
     <th>- Style with bootstrap</th>
     <th>Normal</th>
-    <th>In Progress</th>
+    <th>Done</th>
   <tr>
     <th>- Fix right col styling issue.</th>
     <th>High</th>
-    <th>In Progress</th>
+    <th>Done</th>
   </tr>
     <tr>
     <th>- Add X to remove an expense tile</th>
@@ -102,7 +102,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
     <tr>
     <th>- income select for salary, hourly, monthy</th>
     <th>low</th>
-    <th>Not Started</th>
+    <th>Done</th>
   </tr>
     <tr>
     <th>- accurate tax calculations</th>
@@ -117,7 +117,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
     <tr>
     <th>- make cards collapseable displaying the description and total on thin strip</th>
     <th>normal</th>
-    <th>Not Started</th>
+    <th>Done</th>
   </tr>
     </tr>
     <th>- Investigate and fix updating issue.</th>

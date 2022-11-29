@@ -69,6 +69,7 @@ class App extends Component {
 
                             <div className="incomeTotalCard">
                                 <h1 className="incomeTotalDisplay">${this.state.total}</h1>
+                                <p>...remaining per month</p>
                             </div>
                             <a href="http://www.Quinn-Riley.com">This website was built, owned and ran by Quinn Riley. He can make a website for you too! www.Quinn-Riley.com</a>
                         </div>
