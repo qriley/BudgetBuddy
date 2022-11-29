@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+See the live site at <a href="http://budgetbuddy.finance">BudgetBuddy.finance</a>
 
 ## Available Scripts
 
@@ -75,12 +75,17 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
     <th>Progress</th>
   </tr>
   <tr>
-    <th>- Investigate and fix updating issue.</th>
-    <th>Critical</th>
-    <th>Done</th>
-  </tr>
+      <tr>
+    <th>- Style with bootstrap</th>
+    <th>Normal</th>
+    <th>In Progress</th>
   <tr>
     <th>- Fix right col styling issue.</th>
+    <th>High</th>
+    <th>In Progress</th>
+  </tr>
+    <tr>
+    <th>- Add X to remove an expense tile</th>
     <th>High</th>
     <th>In Progress</th>
   </tr>
@@ -104,4 +109,20 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
     <th>low</th>
     <th>Not Started</th>
   </tr>
+    <tr>
+    <th>- add animation on card add</th>
+    <th>normal</th>
+    <th>Not Started</th>
+ </tr>
+    <tr>
+    <th>- make cards collapseable displaying the description and total on thin strip</th>
+    <th>normal</th>
+    <th>Not Started</th>
+  </tr>
+    </tr>
+    <th>- Investigate and fix updating issue.</th>
+    <th>Critical</th>
+    <th>Done</th>
+  </tr>
+
 </table>

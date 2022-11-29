@@ -80,6 +80,14 @@
     border-radius: 25px;
 }
 
+.incomeClosed {
+    height: 40px;
+    background-color: rgb(77, 212, 106);
+    margin: 2%;
+    padding: 20px;
+    border-radius: 25px;
+}
+
 .expenseCard{
 
   height: 440px;
@@ -87,6 +95,16 @@
   margin: 2%;
   padding: 20px;
   border-radius: 25px;
+}
+
+.expenseClosed {
+    height: 70px;
+    background-color: rgb(212, 77, 77);
+    margin: 2%;
+    padding: 20px;
+    border-radius: 25px;
+    font-size:20px;
+    font-weight:500;
 }
 
 .incomeTotalCard {
