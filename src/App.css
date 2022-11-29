@@ -98,11 +98,13 @@
 }
 
 .expenseClosed {
-    height: 40px;
+    height: 60px;
     background-color: rgb(212, 77, 77);
     margin: 2%;
     padding: 20px;
     border-radius: 25px;
+    font-size:20px;
+    font-weight:500;
 }
 
 .incomeTotalCard {

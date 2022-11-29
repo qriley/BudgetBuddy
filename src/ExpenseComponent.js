@@ -11,7 +11,7 @@ class ExpenseComponent extends React.Component {
             perMonth: 1,
             total: 0,
             title: "Description",
-            isClosed: true
+            isClosed: false
         };
         //this.totalFunction = props.totalFunction;
     }
@@ -52,7 +52,8 @@ class ExpenseComponent extends React.Component {
     }
 
     closedChecker = () => {
-        
+        var changeClosed = !this.state.isClosed;
+        this.setState({ isClosed: changeClosed });
     }
 
     render() {
@@ -85,13 +86,17 @@ class ExpenseComponent extends React.Component {
                         />
                     </form>
                     Approximate cost per month:
-                    <h3 id="totalCost">${this.state.total}</h3>
+                <h3 id="totalCost">${this.state.total}</h3>
+                <button onClick={() => this.closedChecker()} type="button" className="btn btn-outline-light">Collapse</button>
                 </div>;
         } else {
             card =
                 <div className="expenseClosed">
-                    <p>{this.state.title}</p>
-                    <p id="totalCost">${this.state.total}</p>
+                <div className="d-flex justify-content-between">
+                        <span className="col">{this.state.title}</span>
+                        <button onClick={() => this.closedChecker()} className="btn btn-outline-light" >Expand</button>
+                        <span id="totalCost" type="button" className="col">${this.state.total}</span>
+                    </div>
                 </div>;
         }
 
