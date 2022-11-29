@@ -102,7 +102,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
     <tr>
     <th>- income select for salary, hourly, monthy</th>
     <th>low</th>
-    <th>Not Started</th>
+    <th>Done</th>
   </tr>
     <tr>
     <th>- accurate tax calculations</th>
