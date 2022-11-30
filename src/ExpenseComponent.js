@@ -71,7 +71,7 @@ class ExpenseComponent extends React.Component {
                                 type='text'
                                 onChange={this.myExpenseHandler}
                             />
-                            <select className="form" defaultValue="1" onChange={this.perMonthHandler}>
+                        <select className="form selSizer" defaultValue="1" onChange={this.perMonthHandler}>
                                 <option value="12">Yearly</option>
                                 <option value="1">Monthly</option>
                                 <option value="4">Weekly</option>

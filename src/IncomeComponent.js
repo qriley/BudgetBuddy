@@ -56,7 +56,7 @@ class IncomeComponent extends React.Component {
                             id='input'
                         //onChange={this.myIncomeHandler}
                         />
-                        <select className="form" defaultValue="2" onChange={this.perMonthHandler}>
+                        <select className="form selSizer" defaultValue="2" onChange={this.perMonthHandler}>
                             <option value="1">Salary</option>
                             <option value="2">Monthly</option>
                             <option value="3">Weekly</option>
