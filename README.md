@@ -1,5 +1,66 @@
 See the live site at <a href="http://budgetbuddy.finance">BudgetBuddy.finance</a>
 
+
+# ToDo Next
+<table>
+  <tr>
+    <th>Task</th>
+    <th>Priority</th>
+    <th>Progress</th>
+  </tr>
+  <tr>
+      <tr>
+    <th>- Style with bootstrap</th>
+    <th>Normal</th>
+    <th>Done</th>
+  <tr>
+    <th>- Fix right col styling issue.</th>
+    <th>High</th>
+    <th>Done</th>
+  </tr>
+    <tr>
+    <th>- Add X to remove an expense tile</th>
+    <th>High</th>
+    <th>In Progress</th>
+  </tr>
+  <tr>
+    <th>-Build out strategies functions. Sliders for each type?</th>
+    <th>Normal</th>
+    <th>planning</th>
+  </tr>
+    <tr>
+    <th>- Add debt bucket, with interest</th>
+    <th>low</th>
+    <th>Not Started</th>
+  </tr>
+    <tr>
+    <th>- income select for salary, hourly, monthy</th>
+    <th>low</th>
+    <th>Done</th>
+  </tr>
+    <tr>
+    <th>- accurate tax calculations</th>
+    <th>low</th>
+    <th>Not Started</th>
+  </tr>
+    <tr>
+    <th>- add animation on card add</th>
+    <th>normal</th>
+    <th>Not Started</th>
+ </tr>
+    <tr>
+    <th>- make cards collapseable displaying the description and total on thin strip</th>
+    <th>normal</th>
+    <th>Done</th>
+  </tr>
+    </tr>
+    <th>- Investigate and fix updating issue.</th>
+    <th>Critical</th>
+    <th>Done</th>
+  </tr>
+
+</table>
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -67,62 +128,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-# ToDo Next
-<table>
-  <tr>
-    <th>Task</th>
-    <th>Priority</th>
-    <th>Progress</th>
-  </tr>
-  <tr>
-      <tr>
-    <th>- Style with bootstrap</th>
-    <th>Normal</th>
-    <th>Done</th>
-  <tr>
-    <th>- Fix right col styling issue.</th>
-    <th>High</th>
-    <th>Done</th>
-  </tr>
-    <tr>
-    <th>- Add X to remove an expense tile</th>
-    <th>High</th>
-    <th>In Progress</th>
-  </tr>
-  <tr>
-    <th>-Build out strategies functions. Sliders for each type?</th>
-    <th>Normal</th>
-    <th>planning</th>
-  </tr>
-    <tr>
-    <th>- Add debt bucket, with interest</th>
-    <th>low</th>
-    <th>Not Started</th>
-  </tr>
-    <tr>
-    <th>- income select for salary, hourly, monthy</th>
-    <th>low</th>
-    <th>Done</th>
-  </tr>
-    <tr>
-    <th>- accurate tax calculations</th>
-    <th>low</th>
-    <th>Not Started</th>
-  </tr>
-    <tr>
-    <th>- add animation on card add</th>
-    <th>normal</th>
-    <th>Not Started</th>
- </tr>
-    <tr>
-    <th>- make cards collapseable displaying the description and total on thin strip</th>
-    <th>normal</th>
-    <th>Done</th>
-  </tr>
-    </tr>
-    <th>- Investigate and fix updating issue.</th>
-    <th>Critical</th>
-    <th>Done</th>
-  </tr>
 
-</table>
