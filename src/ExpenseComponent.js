@@ -66,7 +66,7 @@ class ExpenseComponent extends React.Component {
                     <form>
                         <h1>This'll cost yah...:</h1>
                         <p>Enter your expense:</p>
-                        <div>
+                    <div className="d-flex justify-content-center">
                             <input className="form textFields"
                                 type='text'
                                 onChange={this.myExpenseHandler}
@@ -87,14 +87,14 @@ class ExpenseComponent extends React.Component {
                     </form>
                     Approximate cost per month:
                 <h3 id="totalCost">${this.state.total}</h3>
-                <button onClick={() => this.closedChecker()} type="button" className="btn btn-outline-light">Collapse</button>
+                <button onClick={() => this.closedChecker()} type="button" className="btn btn-sm btn-outline-light">Collapse</button>
                 </div>;
         } else {
             card =
                 <div className="expenseClosed">
                 <div className="d-flex justify-content-between">
                         <span className="col">{this.state.title}</span>
-                        <button onClick={() => this.closedChecker()} className="btn btn-outline-light" >Expand</button>
+                        <button onClick={() => this.closedChecker()} className="btn btn-sm btn-outline-light" >Expand</button>
                         <span id="totalCost" type="button" className="col">${this.state.total}</span>
                     </div>
                 </div>;
