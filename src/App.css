@@ -112,9 +112,23 @@
 
 .incomeTotalCard {
     height: 100px;
-    background-color: rgb(212, 112, 000);
+    background-color: rgb(233, 196, 106);
     margin: 2%;
     padding: 20px;
     border-radius: 25px;
     text-align: center;
+}
+
+.incomeSplitCard {
+    height: 40px;
+    background-color: rgb(42, 124, 157);
+    margin: 2%;
+    padding: 6px;
+    border-radius: 25px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.percentSlider {
+    margin: 2%;
 }

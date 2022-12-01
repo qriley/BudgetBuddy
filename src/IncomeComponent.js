@@ -48,7 +48,7 @@ class IncomeComponent extends React.Component {
         return (
             <div className="incomeCard">
                 <form>
-                    <h1>Determine your monthly income:</h1>
+                    <h3>Determine your monthly income:</h3>
                     <p>Enter your income after taxes:</p>
                     <div className="d-flex justify-content-center">
                         <input className="form textFields"

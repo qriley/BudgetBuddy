@@ -10,7 +10,7 @@ class ExpenseComponent extends React.Component {
             expense: 0,
             perMonth: 1,
             total: 0,
-            title: "Description",
+            title: "",
             isClosed: false
         };
         //this.totalFunction = props.totalFunction;
@@ -64,8 +64,8 @@ class ExpenseComponent extends React.Component {
                 <div className="expenseCard">
                     <h2>{this.state.title}</h2>
                     <form>
-                        <h1>This'll cost yah...:</h1>
-                        <p>Enter your expense:</p>
+                        <h3>This will cost:</h3>
+                        <p>Expense:</p>
                     <div className="d-flex justify-content-center">
                             <input className="form textFields"
                                 type='text'
@@ -79,7 +79,7 @@ class ExpenseComponent extends React.Component {
                             </select>
                             <button className="form" onClick={this.totalCalculator}>Confirm</button>
                         </div>
-                        <p>Enter your description:</p>
+                        <p>Description:</p>
                         <input className="form textFields"
                             type='text'
                             onChange={this.titleHandler}
