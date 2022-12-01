@@ -9,6 +9,11 @@ See the live site at <a href="http://budgetbuddy.finance">BudgetBuddy.finance</a
     <th>Progress</th>
   </tr>
   <tr>
+  <tr>
+  <th>Sliders fail on mobile: do not react to touch screen! Cannot adjust</th>
+  <th>Critical</th>
+  <th>In Progress</th>
+  </tr>
       <tr>
     <th>- Style with bootstrap</th>
     <th>Normal</th>
