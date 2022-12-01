@@ -87,12 +87,12 @@ class App extends Component {
                             <div className="percentSlider">
                                     <Slider incomeFunction={this.updatePays} />
                             </div>
-                            <div className="incomeSplitCard">
+                            <div className="incomeSplitContain">
                                 <div className="row">
-                                    <p className="col-md-3">Recreation Split: ${this.state.recPay}</p>
-                                    <p className="col-md-3">Debt Split: ${this.state.debtPay}</p>
-                                    <p className="col-md-3">Investment Split: ${this.state.investPay}</p>
-                                    <p className="col-md-3">Savings Split: ${this.state.savePay}</p>
+                                    <p className="incomeSplitCard col-md-3 col-sm-12 col-xs-12">Recreation Split: ${this.state.recPay}</p>
+                                    <p className="incomeSplitCard col-md-3 col-sm-12 col-xs-12">Debt Split: ${this.state.debtPay}</p>
+                                    <p className="incomeSplitCard col-md-3 col-sm-12 col-xs-12">Investment Split: ${this.state.investPay}</p>
+                                    <p className="incomeSplitCard col-md-3 col-sm-12 col-xs-12">Savings Split: ${this.state.savePay}</p>
                                 </div>
                             </div>
                             <div className="additionalCards">
