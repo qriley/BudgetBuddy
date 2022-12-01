@@ -26,7 +26,7 @@ See the live site at <a href="http://budgetbuddy.finance">BudgetBuddy.finance</a
   <tr>
     <th>-Build out strategies functions. Sliders for each type?</th>
     <th>Normal</th>
-    <th>planning</th>
+    <th>Done</th>
   </tr>
     <tr>
     <th>- Add debt bucket, with interest</th>
