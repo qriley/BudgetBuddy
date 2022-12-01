@@ -12,7 +12,7 @@ See the live site at <a href="http://budgetbuddy.finance">BudgetBuddy.finance</a
   <tr>
   <th>Sliders fail on mobile: do not react to touch screen! Cannot adjust</th>
   <th>Critical</th>
-  <th>In Progress</th>
+  <th>Done</th>
   </tr>
       <tr>
     <th>- Style with bootstrap</th>
