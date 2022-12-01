@@ -6,6 +6,9 @@ import ExpenseComp from './ExpenseComponent.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import PercentagesSlider from "react-percentages-slider";
+import "react-percentages-slider/dist/index.css";
+import Slider from './Slider.js';
 class App extends Component {
     constructor() {
         super();
@@ -14,7 +17,11 @@ class App extends Component {
             expense: .00,
             total: .00,
             components: 1,
-            rows: [<ExpenseComp className="span10" key={this.components} totalFunction={this.updateTotal} />]
+            rows: [<ExpenseComp className="span10" key={this.components} totalFunction={this.updateTotal} />],
+            recPay: .00,
+            debtPay: .00,
+            investPay: .00,
+            savePay: .00
         }
 
     }
@@ -28,6 +35,7 @@ class App extends Component {
         this.setState({ total: tot })
 
     }
+
 
     incomeTotal = (toAdd) => {
         var tot = Number(toAdd) - Number(this.state.expense)
@@ -49,7 +57,11 @@ class App extends Component {
         this.setState({ rows: tempRows });
     }
 
-
+    processPercents = () => {
+        this.state.example.forEach((el) => {
+            console.log("asek", el.percentage);
+        })
+    }
     render() {
         return (
             <div className="App">
@@ -61,6 +73,7 @@ class App extends Component {
                     <div className="row">
                         <div className="leftCol col-md-12">
                             <IncomeComp incomeFunction={this.incomeTotal} />
+                            <Slider/>
                             <div className="additionalCards">
                                 {this.state.rows}
 
@@ -73,28 +86,6 @@ class App extends Component {
                             </div>
                             <a href="http://www.Quinn-Riley.com">This website was built, owned and ran by Quinn Riley. He can make a website for you too! www.Quinn-Riley.com</a>
                         </div>
-                        {/*<div className="rightCol col-md-4">*/}
-                        {/*    <button className="stratCard">*/}
-                        {/*        <h2>*/}
-                        {/*            TEST*/}
-                        {/*        </h2>*/}
-                        {/*    </button>*/}
-                        {/*    <button className="stratCard">*/}
-                        {/*        <h2>*/}
-                        {/*            TEST*/}
-                        {/*        </h2>*/}
-                        {/*    </button>*/}
-                        {/*    <button className="stratCard">*/}
-                        {/*        <h2>*/}
-                        {/*            TEST*/}
-                        {/*        </h2>*/}
-                        {/*    </button>*/}
-                        {/*    <button className="stratCard">*/}
-                        {/*        <h2>*/}
-                        {/*            TEST*/}
-                        {/*        </h2>*/}
-                        {/*    </button>*/}
-                        {/*</div>*/}
                     </div>
                         
 
