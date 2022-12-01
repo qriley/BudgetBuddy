@@ -122,11 +122,14 @@
 .incomeSplitCard {
     height: 40px;
     background-color: rgb(42, 124, 157);
-    margin: 2%;
     padding: 6px;
     border-radius: 25px;
+}
+.incomeSplitContain {
+    margin: 2%;
     text-align: center;
     font-weight: 500;
+    padding: 6px;
 }
 
 .percentSlider {
