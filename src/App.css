@@ -123,7 +123,10 @@
     height: 40px;
     background-color: rgb(42, 124, 157);
     padding: 6px;
-    border-radius: 25px;
+    border-radius: 10px;
+    outline-color:#bbb;
+    outline-width: 1px;
+    outline-style:solid;
 }
 .incomeSplitContain {
     margin: 2%;
