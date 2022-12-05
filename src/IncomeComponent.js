@@ -50,7 +50,7 @@ class IncomeComponent extends React.Component {
                 <form>
                     <h3>Determine your monthly income:</h3>
                     <p>Enter your income after taxes:</p>
-                    <div className="form-control input-sm d-flex justify-content-center ">
+                    <div className="input-sm d-flex justify-content-center ">
                         <input className="form-control input-sm"
                             type='text'
                             id='input'
