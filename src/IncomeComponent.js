@@ -5,7 +5,7 @@ class IncomeComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            income: 0,
+            income: null,
             type: 1.00
         };
     }
@@ -54,6 +54,7 @@ class IncomeComponent extends React.Component {
                         <input className="form-control input-sm"
                             type='text'
                             id='input'
+                            placeholder="Income"
                         //onChange={this.myIncomeHandler}
                         />
                         <select className="form-control input-sm" defaultValue="2" onChange={this.perMonthHandler}>

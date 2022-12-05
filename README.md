@@ -9,6 +9,11 @@ See the live site at <a href="http://budgetbuddy.finance">BudgetBuddy.finance</a
     <th>Progress</th>
   </tr>
 <tr>
+    <th>- Add saving in save state or with cookie maybe.</th>
+    <th>Low</th>
+    <th>Planning</th>
+ </tr>
+<tr>
     <th>- Update from class components to functional components.</th>
     <th>Low</th>
     <th>Planning</th>
