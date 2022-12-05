@@ -67,20 +67,20 @@ class ExpenseComponent extends React.Component {
                         <h3>This will cost:</h3>
                         <p>Expense:</p>
                     <div className="d-flex justify-content-center">
-                            <input className="form textFields"
+                        <input className="form-control input-sm"
                                 type='text'
                                 onChange={this.myExpenseHandler}
                             />
-                        <select className="form selSizer" defaultValue="1" onChange={this.perMonthHandler}>
+                        <select className="form-control input-sm" defaultValue="1" onChange={this.perMonthHandler}>
                                 <option value="12">Yearly</option>
                                 <option value="1">Monthly</option>
                                 <option value="4">Weekly</option>
                                 <option value="30">Daily</option>
                             </select>
-                            <button className="form" onClick={this.totalCalculator}>Confirm</button>
+                        <button className="form-control input-sm" onClick={this.totalCalculator}>Confirm</button>
                         </div>
                         <p>Description:</p>
-                        <input className="form textFields"
+                    <input className="form-control input-sm"
                             type='text'
                             onChange={this.titleHandler}
                         />
