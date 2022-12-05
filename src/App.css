@@ -76,7 +76,7 @@
 }
 
 .incomeCard {
-    height: 200px;
+    height: 170px;
     background-color: rgb(77, 212, 106);
     margin: 2%;
     padding: 20px;
@@ -93,7 +93,7 @@
 
 .expenseCard{
 
-  height: 420px;
+  height: 325px;
   background-color: rgb(212, 77, 77);
   margin: 2%;
   padding: 20px;

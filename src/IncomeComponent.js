@@ -50,19 +50,19 @@ class IncomeComponent extends React.Component {
                 <form>
                     <h3>Determine your monthly income:</h3>
                     <p>Enter your income after taxes:</p>
-                    <div className="d-flex justify-content-center">
-                        <input className="form textFields"
+                    <div className="input-sm d-flex justify-content-center ">
+                        <input className="form-control input-sm"
                             type='text'
                             id='input'
                         //onChange={this.myIncomeHandler}
                         />
-                        <select className="form selSizer" defaultValue="2" onChange={this.perMonthHandler}>
+                        <select className="form-control input-sm" defaultValue="2" onChange={this.perMonthHandler}>
                             <option value="1">Salary</option>
                             <option value="2">Monthly</option>
                             <option value="3">Weekly</option>
                             <option value="4">Hourly (40 Hrs)</option>
                         </select>
-                        <button className="form" onClick={this.myIncomeHandler}>Confirm</button>
+                        <button className="form-control input-sm" onClick={this.myIncomeHandler}>Confirm</button>
                     </div>
                 </form>
             </div>
