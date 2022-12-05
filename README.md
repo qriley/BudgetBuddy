@@ -19,7 +19,7 @@ See the live site at <a href="http://budgetbuddy.finance">BudgetBuddy.finance</a
     <th>In Progress</th>
   </tr>
   <tr>
-    <th>- Make budget slider section sticky to top hwich scrolls with you</th>
+    <th>- Make budget slider section sticky to top which scrolls with you</th>
     <th>low</th>
     <th>Not Started</th>
   </tr>
