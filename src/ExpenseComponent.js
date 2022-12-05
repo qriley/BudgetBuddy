@@ -10,7 +10,7 @@ class ExpenseComponent extends React.Component {
             expense: 0,
             perMonth: 1,
             total: 0,
-            title: "",
+            title: "-",
             isClosed: false
         };
         //this.totalFunction = props.totalFunction;
