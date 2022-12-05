@@ -65,11 +65,11 @@ class ExpenseComponent extends React.Component {
                     <h2>{this.state.title}</h2>
                     <form>
                         <h3>This will cost:</h3>
-                        <p>Expense:</p>
                     <div className="d-flex justify-content-center">
                         <input className="form-control input-sm"
                                 type='text'
                                 onChange={this.myExpenseHandler}
+                                placeholder="Amount"
                             />
                         <select className="form-control input-sm" defaultValue="1" onChange={this.perMonthHandler}>
                                 <option value="12">Yearly</option>
@@ -78,11 +78,12 @@ class ExpenseComponent extends React.Component {
                                 <option value="30">Daily</option>
                             </select>
                         <button className="form-control input-sm" onClick={this.totalCalculator}>Confirm</button>
-                        </div>
-                        <p>Description:</p>
+                    </div>
+                    <br/>
                     <input className="form-control input-sm"
                             type='text'
                             onChange={this.titleHandler}
+                            placeholder="Description"
                         />
                     </form>
                     Approximate cost per month:
