@@ -21,7 +21,7 @@ See the live site at <a href="http://budgetbuddy.finance">BudgetBuddy.finance</a
  <tr>
     <th>- Add X to remove an expense tile</th>
     <th>High</th>
-    <th>In Progress</th>
+    <th>Done</th>
   </tr>
   <tr>
     <th>- Make budget slider section sticky to top which scrolls with you</th>
