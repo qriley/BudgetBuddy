@@ -58,9 +58,7 @@ class ExpenseComponent extends React.Component {
     }
 
     handleClose = () => {
-        console.log("CLOSE");
         this.setState({
-            //total: 0,
             hidden: true
         });
         this.props.totalFunction(Number(-this.state.total));
