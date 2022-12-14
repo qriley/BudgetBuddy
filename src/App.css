@@ -51,7 +51,18 @@
     padding: 10px;
     border-radius: 15px;
     text-align: center;
-    font-size: x-large
+    font-size: x-large;
+    margin:10px;
+}
+.addButton2 {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(77, 212, 106);
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: x-large;
+    margin: 10px;
 }
 
 .mainContent {

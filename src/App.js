@@ -101,8 +101,10 @@ class App extends Component {
                                 {this.state.rows}
 
                             </div>
-                            <button className="addButton" onClick={this.addComponent}>+</button>
-
+                            <div className="d-flex justify-content-center">
+                                <button className="addButton" onClick={this.addComponent}>+</button>
+                                <button className="addButton2" onClick={this.addComponent2}>+</button>
+                                </div>
                             <div className="incomeTotalCard">
                                 <h4 className="incomeTotalDisplay">${this.state.total}</h4>
                                 <p>...remaining total per month</p>
