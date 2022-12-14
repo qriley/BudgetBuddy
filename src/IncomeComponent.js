@@ -66,8 +66,13 @@ class IncomeComponent extends React.Component {
 
             if (!this.state.isClosed) {
                 card = <div className="incomeCard">
+
                     <form>
-                        <h3>{this.state.title}</h3>
+                        <div className="d-flex d-flex justify-content-between ">
+                        <CloseButton onClick={this.handleClose} />
+                            <h3>{this.state.title}</h3>
+                            <p/>
+                            </div>
                         <p>Enter your income after taxes:</p>
                         <div className="input-sm d-flex justify-content-center ">
                             <input className="form-control input-sm"
@@ -101,7 +106,7 @@ class IncomeComponent extends React.Component {
                 card =
                     <div className="incomeClosed">
                         <div className="d-flex justify-content-between">
-                            {/*<CloseButton onClick={this.handleClose} />*/}
+                            <CloseButton onClick={this.handleClose} />
                             <span className="col">{this.state.title}</span>
                             <button onClick={() => this.closedChecker()} className="btn btn-sm btn-outline-light" >Expand</button>
                             <span id="totalCost" type="button" className="col">${this.state.income}</span>
