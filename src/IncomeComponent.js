@@ -9,11 +9,15 @@ class IncomeComponent extends React.Component {
             income: 0.00,
             type: 1.00,
             title: "Income",
+            title2: null,
+            amount: null,
             isClosed: false,
             hidden: false
         };
     }
-
+    myIncome2Handler2 = (event) => {
+               this.setState({ amount: event.target.value });
+    }
     myIncomeHandler = (event) => {
         event.preventDefault();
         const re = /^[0-9\b]+$/;
@@ -32,6 +36,8 @@ class IncomeComponent extends React.Component {
 
     titleHandler = (event) => {
         this.setState({ title: event.target.value });
+        this.setState({ title2: event.target.value });
+
     }
 
     perMonthHandler = (event) => {
@@ -68,7 +74,8 @@ class IncomeComponent extends React.Component {
                                 type='text'
                                 id='input'
                                 placeholder="Income"
-                            //onChange={this.myIncomeHandler}
+                                value={this.state.amount}
+                                onChange={this.myIncome2Handler2}
                             />
                             <select className="form-control input-sm" defaultValue="2" onChange={this.perMonthHandler}>
                                 <option value="1">Salary</option>
@@ -82,6 +89,7 @@ class IncomeComponent extends React.Component {
                         <input className="form-control input-sm"
                             type='text'
                             onChange={this.titleHandler}
+                            value={this.state.title2}
                             placeholder="Description"
                         />
                     </form>

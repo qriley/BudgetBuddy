@@ -17,7 +17,9 @@ class App extends Component {
             expense: .00,
             total: .00,
             components: 1,
+            components2: 1,
             rows: [<ExpenseComp className="span10" key={this.components} totalFunction={this.updateTotal} />],
+            rows2: [<IncomeComp key={this.components2} incomeFunction={this.incomeTotal} />],
             recPay: .00,
             debtPay: .00,
             investPay: .00,
@@ -49,9 +51,11 @@ class App extends Component {
     }
 
     incomeTotal = (toAdd) => {
-        var tot = Number(toAdd) - Number(this.state.expense)
+        var tempIncome = Number(toAdd) + this.state.income
 
-        this.setState({ income: Number(toAdd), total:  tot})
+        var tot = tempIncome - Number(this.state.expense)
+
+        this.setState({ income: tempIncome, total: tot })
         
     }
     addComponent = () => {
@@ -66,6 +70,19 @@ class App extends Component {
         tempRows.push(<ExpenseComp key={this.components} totalFunction={this.updateTotal} />);
 
         this.setState({ rows: tempRows });
+    }
+    addComponent2 = () => {
+
+        this.setState({ components2: this.state.components2++ });
+        var tempRows2 = this.state.rows2
+
+
+
+        // note: we are adding a key prop here to allow react to uniquely identify each
+        // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
+        tempRows2.push(<IncomeComp key={this.components2} incomeFunction={this.incomeTotal} />);
+
+        this.setState({ rows2: tempRows2 });
     }
 
     processPercents = () => {
@@ -95,14 +112,19 @@ class App extends Component {
                                 </div>
                             </div>
 
-                            <IncomeComp incomeFunction={this.incomeTotal} />
-                            
+                            {/*<IncomeComp incomeFunction={this.incomeTotal} />*/}
+                            <div className="additionalCards">
+                                {this.state.rows2}
+
+                            </div>
                             <div className="additionalCards">
                                 {this.state.rows}
 
                             </div>
-                            <button className="addButton" onClick={this.addComponent}>+</button>
-
+                            <div className="d-flex justify-content-center">
+                                <button className="addButton" onClick={this.addComponent}>+</button>
+                                <button className="addButton2" onClick={this.addComponent2}>+</button>
+                                </div>
                             <div className="incomeTotalCard">
                                 <h4 className="incomeTotalDisplay">${this.state.total}</h4>
                                 <p>...remaining total per month</p>
