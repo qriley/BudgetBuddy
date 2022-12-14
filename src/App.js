@@ -83,9 +83,8 @@ class App extends Component {
                 <div className="mainContent container">
                     <div className="row">
                         <div className="leftCol col-md-12">
-                            <IncomeComp incomeFunction={this.incomeTotal} />
                             <div className="percentSlider">
-                                    <Slider incomeFunction={this.updatePays} />
+                                <Slider incomeFunction={this.updatePays} />
                             </div>
                             <div className="incomeSplitContain">
                                 <div className="row">
@@ -95,6 +94,9 @@ class App extends Component {
                                     <p className="incomeSplitCard col-md-3 col-sm-12 col-xs-12">Savings Split: ${this.state.savePay}</p>
                                 </div>
                             </div>
+
+                            <IncomeComp incomeFunction={this.incomeTotal} />
+                            
                             <div className="additionalCards">
                                 {this.state.rows}
 
