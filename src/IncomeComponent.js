@@ -6,7 +6,7 @@ class IncomeComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            income: null,
+            income: 0.00,
             type: 1.00,
             title: "income",
             isClosed: false,
@@ -87,7 +87,7 @@ class IncomeComponent extends React.Component {
                             <CloseButton onClick={this.handleClose} />
                             <span className="col">{this.state.title}</span>
                             <button onClick={() => this.closedChecker()} className="btn btn-sm btn-outline-light" >Expand</button>
-                            <span id="totalCost" type="button" className="col">${this.state.total}</span>
+                            <span id="totalCost" type="button" className="col">${this.state.income}</span>
                         </div>
                     </div>;
             }
