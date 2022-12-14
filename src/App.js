@@ -17,7 +17,9 @@ class App extends Component {
             expense: .00,
             total: .00,
             components: 1,
+            components2: 1,
             rows: [<ExpenseComp className="span10" key={this.components} totalFunction={this.updateTotal} />],
+            rows2: [<IncomeComp key={this.components2} incomeFunction={this.incomeTotal} />],
             recPay: .00,
             debtPay: .00,
             investPay: .00,
@@ -49,9 +51,11 @@ class App extends Component {
     }
 
     incomeTotal = (toAdd) => {
-        var tot = Number(toAdd) - Number(this.state.expense)
+        var tempIncome = Number(toAdd) + this.state.income
 
-        this.setState({ income: Number(toAdd), total:  tot})
+        var tot = tempIncome - Number(this.state.expense)
+
+        this.setState({ income: tempIncome, total: tot })
         
     }
     addComponent = () => {
@@ -66,6 +70,19 @@ class App extends Component {
         tempRows.push(<ExpenseComp key={this.components} totalFunction={this.updateTotal} />);
 
         this.setState({ rows: tempRows });
+    }
+    addComponent2 = () => {
+
+        this.setState({ components2: this.state.components2++ });
+        var tempRows2 = this.state.rows2
+
+
+
+        // note: we are adding a key prop here to allow react to uniquely identify each
+        // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
+        tempRows2.push(<IncomeComp key={this.components2} incomeFunction={this.incomeTotal} />);
+
+        this.setState({ rows2: tempRows2 });
     }
 
     processPercents = () => {
@@ -83,9 +100,30 @@ class App extends Component {
                 <div className="mainContent container">
                     <div className="row">
                         <div className="leftCol col-md-12">
-                            <IncomeComp incomeFunction={this.incomeTotal} />
+                            
+
+                            {/*<IncomeComp incomeFunction={this.incomeTotal} />*/}
+                            <div className="additionalCards">
+                                {this.state.rows2}
+
+                            </div>
+                            <div className="additionalCards">
+                                {this.state.rows}
+
+                            </div>
+                            <div className="d-flex justify-content-center">
+                                <button className="addButton" onClick={this.addComponent}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">   <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" /> </svg></button>
+                                <button className="addButton2" onClick={this.addComponent2}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">   <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" /> </svg></button>
+                                </div>
+                            <div className="incomeTotalCard d-flex justify-content-center">
+                                <h4>Total:&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                                <h4 className="incomeTotalDisplay">${this.state.total}</h4>
+                                <p></p>
+
+                            </div>
+
                             <div className="percentSlider">
-                                    <Slider incomeFunction={this.updatePays} />
+                                <Slider incomeFunction={this.updatePays} />
                             </div>
                             <div className="incomeSplitContain">
                                 <div className="row">
@@ -94,17 +132,6 @@ class App extends Component {
                                     <p className="incomeSplitCard col-md-3 col-sm-12 col-xs-12">Investment Split: ${this.state.investPay}</p>
                                     <p className="incomeSplitCard col-md-3 col-sm-12 col-xs-12">Savings Split: ${this.state.savePay}</p>
                                 </div>
-                            </div>
-                            <div className="additionalCards">
-                                {this.state.rows}
-
-                            </div>
-                            <button className="addButton" onClick={this.addComponent}>+</button>
-
-                            <div className="incomeTotalCard">
-                                <h4 className="incomeTotalDisplay">${this.state.total}</h4>
-                                <p>...remaining total per month</p>
-
                             </div>
                             <a href="http://www.Quinn-Riley.com">This website was built, owned and ran by Quinn Riley. He can make a website for you too! www.Quinn-Riley.com</a>
                         </div>

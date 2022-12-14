@@ -1,7 +1,15 @@
+.html {
+        background-color: #282c34;
+    height: 100%;
+}
+svg {
+    height: 100%;
+    width: 100%;
+}
 .App {
-  text-align: center;
-  background-color: #bbb;
-  height: 100%;
+    text-align: center;
+    background-color: #282c34;
+    min-height: 100vh;
 }
 
 .App-header {
@@ -36,14 +44,27 @@
 .selSizer {
     width:110px;
 }
+.margin10 {
+    margin: 10px;
+}
 .addButton {
     height: 50px;
     width: 50px;
-    background-color: rgb(77, 212, 106);
-    padding: 10px;
+    background-color: rgb(212, 77, 77);
     border-radius: 15px;
     text-align: center;
-    font-size: x-large
+    font-size: x-large;
+    margin:10px;
+}
+
+.addButton2 {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(77, 212, 106);
+    border-radius: 15px;
+    text-align: center;
+    font-size: x-large;
+    margin: 10px;
 }
 
 .mainContent {
@@ -52,14 +73,14 @@
 }
 
 .leftCol {
-    background-color: #bbb;
+    background-color: #282c34;
     width: 100%;
     float: left;
     height: 100%;
 }
 
 .rightCol {
-    background-color: #bbb;
+    background-color: #282c34;
     width: 20%;
     float: right;
     height: 100%;
@@ -76,7 +97,7 @@
 }
 
 .incomeCard {
-    height: 170px;
+    height: 315px;
     background-color: rgb(77, 212, 106);
     margin: 2%;
     padding: 20px;
@@ -84,7 +105,7 @@
 }
 
 .incomeClosed {
-    height: 40px;
+    height: 70px;
     background-color: rgb(77, 212, 106);
     margin: 2%;
     padding: 20px;
@@ -111,7 +132,7 @@
 }
 
 .incomeTotalCard {
-    height: 100px;
+    height: 70px;
     background-color: rgb(233, 196, 106);
     margin: 2%;
     padding: 20px;
@@ -121,12 +142,12 @@
 
 .incomeSplitCard {
     height: 40px;
-    background-color: rgb(42, 124, 157);
+    background-color: #fff;
     padding: 6px;
     border-radius: 10px;
-    outline-color:#bbb;
+    outline-color: #282c34;
     outline-width: 1px;
-    outline-style:solid;
+    outline-style: solid;
 }
 .incomeSplitContain {
     margin: 2%;

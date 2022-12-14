@@ -7,10 +7,11 @@ class ExpenseComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            expense: 0,
+            expense: null,
             perMonth: 1,
-            total: 0,
+            total: 0.00,
             title: "-",
+            title2: null,
             isClosed: false,
             hidden: false
         };
@@ -50,6 +51,7 @@ class ExpenseComponent extends React.Component {
 
     titleHandler = (event) => {
         this.setState({ title: event.target.value });
+        this.setState({ title2: event.target.value });
     }
 
     closedChecker = () => {
@@ -79,10 +81,11 @@ class ExpenseComponent extends React.Component {
                         <form>
                             <h3>This will cost:</h3>
                             <div className="d-flex justify-content-center">
-                                <input className="form-control input-sm"
-                                    type='text'
-                                    onChange={this.myExpenseHandler}
-                                    placeholder="Amount"
+                            <input className="form-control input-sm"
+                                type='text'
+                                onChange={this.myExpenseHandler}
+                                placeholder="Amount"
+                                value={this.state.expense}
                                 />
                                 <select className="form-control input-sm" defaultValue="1" onChange={this.perMonthHandler}>
                                     <option value="12">Yearly</option>
@@ -93,10 +96,11 @@ class ExpenseComponent extends React.Component {
                                 <button className="form-control input-sm" onClick={this.totalCalculator}>Confirm</button>
                             </div>
                             <br />
-                            <input className="form-control input-sm"
-                                type='text'
-                                onChange={this.titleHandler}
-                                placeholder="Description"
+                        <input className="form-control input-sm"
+                            type='text'
+                            onChange={this.titleHandler}
+                            placeholder="Description"
+                            value={this.state.title2}
                             />
                         </form>
                         Approximate cost per month:
