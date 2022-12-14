@@ -28,7 +28,7 @@ export default function Slider(props) {
                     divisions={example}
                     setDivisions={setExample} />
             </div>
-            <div className="col-1 col-xs-12">
+            <div className="col-1">
                 <button className="btn btn-light" onClick={doClick}>Refresh</button>
             </div>
             

@@ -2,7 +2,10 @@
         background-color: #282c34;
     height: 100%;
 }
-
+svg {
+    height: 100%;
+    width: 100%;
+}
 .App {
     text-align: center;
     background-color: #282c34;
@@ -48,17 +51,16 @@
     height: 50px;
     width: 50px;
     background-color: rgb(212, 77, 77);
-    padding: 10px;
     border-radius: 15px;
     text-align: center;
     font-size: x-large;
     margin:10px;
 }
+
 .addButton2 {
     height: 50px;
     width: 50px;
     background-color: rgb(77, 212, 106);
-    padding: 10px;
     border-radius: 15px;
     text-align: center;
     font-size: x-large;
