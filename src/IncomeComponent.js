@@ -8,7 +8,7 @@ class IncomeComponent extends React.Component {
         this.state = {
             income: 0.00,
             type: 1.00,
-            title: "income",
+            title: "Income",
             isClosed: false,
             hidden: false
         };
@@ -18,7 +18,7 @@ class IncomeComponent extends React.Component {
         event.preventDefault();
         const re = /^[0-9\b]+$/;
         var inputVal = document.getElementById("input").value;
-        
+
         if (inputVal === '' || re.test(inputVal)) {
             var totOverType = (inputVal / this.state.type)
             var adder = Number(totOverType).toFixed(2)
@@ -30,19 +30,20 @@ class IncomeComponent extends React.Component {
 
     }
 
+    titleHandler = (event) => {
+        this.setState({ title: event.target.value });
+    }
+
     perMonthHandler = (event) => {
         var howOften = event.target.value;
 
         if (howOften == 1) {
-            this.setState({ type: 12.00});
-        } else if(howOften == 2)
-        {
+            this.setState({ type: 12.00 });
+        } else if (howOften == 2) {
             this.setState({ type: 1.00 });
-        } else if(howOften == 3)
-        {
+        } else if (howOften == 3) {
             this.setState({ type: 0.25 });
-        } else if(howOften == 4)
-        {
+        } else if (howOften == 4) {
             this.setState({ type: 0.00625 });
         }
 
@@ -60,7 +61,7 @@ class IncomeComponent extends React.Component {
             if (!this.state.isClosed) {
                 card = <div className="incomeCard">
                     <form>
-                        <h3>Determine your monthly income:</h3>
+                        <h3>{this.state.title}</h3>
                         <p>Enter your income after taxes:</p>
                         <div className="input-sm d-flex justify-content-center ">
                             <input className="form-control input-sm"
@@ -77,14 +78,22 @@ class IncomeComponent extends React.Component {
                             </select>
                             <button className="form-control input-sm" onClick={this.myIncomeHandler}>Confirm</button>
                         </div>
-                        <button onClick={() => this.closedChecker()} type="button" className="margin10 btn btn-sm btn-outline-light">Collapse</button>
+                        <br />
+                        <input className="form-control input-sm"
+                            type='text'
+                            onChange={this.titleHandler}
+                            placeholder="Description"
+                        />
                     </form>
+                    Approximate income per month:
+                    <h3 id="totalCost">${this.state.income}</h3>
+                    <button onClick={() => this.closedChecker()} type="button" className="margin10 btn btn-sm btn-outline-light">Collapse</button>
                 </div>
             } else {
                 card =
                     <div className="incomeClosed">
                         <div className="d-flex justify-content-between">
-                            <CloseButton onClick={this.handleClose} />
+                            {/*<CloseButton onClick={this.handleClose} />*/}
                             <span className="col">{this.state.title}</span>
                             <button onClick={() => this.closedChecker()} className="btn btn-sm btn-outline-light" >Expand</button>
                             <span id="totalCost" type="button" className="col">${this.state.income}</span>
@@ -99,7 +108,7 @@ class IncomeComponent extends React.Component {
             </div>
         );
 
-       
+
     }
 }
 
