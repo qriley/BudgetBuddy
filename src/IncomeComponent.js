@@ -8,7 +8,7 @@ class IncomeComponent extends React.Component {
         this.state = {
             income: 0.00,
             type: 1.00,
-            title: "Income",
+            title: "-",
             title2: null,
             amount: null,
             isClosed: false,
