@@ -1,7 +1,7 @@
 .App {
-  text-align: center;
-  background-color: #bbb;
-  height: 100%;
+    text-align: center;
+    background-color: #282c34;
+    height: 100%;
 }
 
 .App-header {
@@ -36,10 +36,13 @@
 .selSizer {
     width:110px;
 }
+.margin10 {
+    margin: 10px;
+}
 .addButton {
     height: 50px;
     width: 50px;
-    background-color: rgb(77, 212, 106);
+    background-color: rgb(212, 77, 77);
     padding: 10px;
     border-radius: 15px;
     text-align: center;
@@ -52,14 +55,14 @@
 }
 
 .leftCol {
-    background-color: #bbb;
+    background-color: #282c34;
     width: 100%;
     float: left;
     height: 100%;
 }
 
 .rightCol {
-    background-color: #bbb;
+    background-color: #282c34;
     width: 20%;
     float: right;
     height: 100%;
@@ -76,7 +79,7 @@
 }
 
 .incomeCard {
-    height: 170px;
+    height: 190px;
     background-color: rgb(77, 212, 106);
     margin: 2%;
     padding: 20px;
@@ -84,7 +87,7 @@
 }
 
 .incomeClosed {
-    height: 40px;
+    height: 70px;
     background-color: rgb(77, 212, 106);
     margin: 2%;
     padding: 20px;
@@ -124,9 +127,9 @@
     background-color: rgb(42, 124, 157);
     padding: 6px;
     border-radius: 10px;
-    outline-color:#bbb;
+    outline-color: #282c34;
     outline-width: 1px;
-    outline-style:solid;
+    outline-style: solid;
 }
 .incomeSplitContain {
     margin: 2%;
