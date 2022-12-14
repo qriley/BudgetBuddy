@@ -8,6 +8,23 @@ See the live site at <a href="http://budgetbuddy.finance">BudgetBuddy.finance</a
     <th>Priority</th>
     <th>Progress</th>
   </tr>
+  <tr>
+    <th>- Add desc to income.</th>
+    <th>Low</th>
+    <th>Planning</th>
+ </tr>
+ 
+  <tr>
+    <th>- Add multiple income cards.</th>
+    <th>high</th>
+    <th>Planning</th>
+ </tr>
+ <tr>
+    <th>- Make income collapsable</th>
+    <th>Medium</th>
+    <th>In Progress</th>
+ </tr>
+ 
 <tr>
     <th>- Add saving in save state or with cookie maybe.</th>
     <th>Low</th>
