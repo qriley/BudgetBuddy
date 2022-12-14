@@ -2,7 +2,10 @@
         background-color: #282c34;
     height: 100%;
 }
-
+svg {
+    height: 100%;
+    width: 100%;
+}
 .App {
     text-align: center;
     background-color: #282c34;
@@ -48,17 +51,16 @@
     height: 50px;
     width: 50px;
     background-color: rgb(212, 77, 77);
-    padding: 10px;
     border-radius: 15px;
     text-align: center;
     font-size: x-large;
     margin:10px;
 }
+
 .addButton2 {
     height: 50px;
     width: 50px;
     background-color: rgb(77, 212, 106);
-    padding: 10px;
     border-radius: 15px;
     text-align: center;
     font-size: x-large;
@@ -130,7 +132,7 @@
 }
 
 .incomeTotalCard {
-    height: 100px;
+    height: 70px;
     background-color: rgb(233, 196, 106);
     margin: 2%;
     padding: 20px;
@@ -140,7 +142,7 @@
 
 .incomeSplitCard {
     height: 40px;
-    background-color: rgb(42, 124, 157);
+    background-color: #fff;
     padding: 6px;
     border-radius: 10px;
     outline-color: #282c34;

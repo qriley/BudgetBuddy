@@ -100,17 +100,7 @@ class App extends Component {
                 <div className="mainContent container">
                     <div className="row">
                         <div className="leftCol col-md-12">
-                            <div className="percentSlider">
-                                <Slider incomeFunction={this.updatePays} />
-                            </div>
-                            <div className="incomeSplitContain">
-                                <div className="row">
-                                    <p className="incomeSplitCard col-md-3 col-sm-12 col-xs-12">Recreation Split: ${this.state.recPay}</p>
-                                    <p className="incomeSplitCard col-md-3 col-sm-12 col-xs-12">Debt Split: ${this.state.debtPay}</p>
-                                    <p className="incomeSplitCard col-md-3 col-sm-12 col-xs-12">Investment Split: ${this.state.investPay}</p>
-                                    <p className="incomeSplitCard col-md-3 col-sm-12 col-xs-12">Savings Split: ${this.state.savePay}</p>
-                                </div>
-                            </div>
+                            
 
                             {/*<IncomeComp incomeFunction={this.incomeTotal} />*/}
                             <div className="additionalCards">
@@ -122,13 +112,26 @@ class App extends Component {
 
                             </div>
                             <div className="d-flex justify-content-center">
-                                <button className="addButton" onClick={this.addComponent}>+</button>
-                                <button className="addButton2" onClick={this.addComponent2}>+</button>
+                                <button className="addButton" onClick={this.addComponent}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">   <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" /> </svg></button>
+                                <button className="addButton2" onClick={this.addComponent2}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">   <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" /> </svg></button>
                                 </div>
-                            <div className="incomeTotalCard">
+                            <div className="incomeTotalCard d-flex justify-content-center">
+                                <h4>Total:&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                                 <h4 className="incomeTotalDisplay">${this.state.total}</h4>
-                                <p>...remaining total per month</p>
+                                <p></p>
 
+                            </div>
+
+                            <div className="percentSlider">
+                                <Slider incomeFunction={this.updatePays} />
+                            </div>
+                            <div className="incomeSplitContain">
+                                <div className="row">
+                                    <p className="incomeSplitCard col-md-3 col-sm-12 col-xs-12">Recreation Split: ${this.state.recPay}</p>
+                                    <p className="incomeSplitCard col-md-3 col-sm-12 col-xs-12">Debt Split: ${this.state.debtPay}</p>
+                                    <p className="incomeSplitCard col-md-3 col-sm-12 col-xs-12">Investment Split: ${this.state.investPay}</p>
+                                    <p className="incomeSplitCard col-md-3 col-sm-12 col-xs-12">Savings Split: ${this.state.savePay}</p>
+                                </div>
                             </div>
                             <a href="http://www.Quinn-Riley.com">This website was built, owned and ran by Quinn Riley. He can make a website for you too! www.Quinn-Riley.com</a>
                         </div>

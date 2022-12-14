@@ -23,7 +23,7 @@ export default function Slider(props) {
 
     return (
         <div className="row">
-            <div className="col-11">
+            <div className="col-10">
                 <PercentagesSlider
                     divisions={example}
                     setDivisions={setExample} />
