@@ -12,18 +12,18 @@ See the live site at <a href="http://budgetbuddy.finance">BudgetBuddy.finance</a
   <tr>
     <th>- Add desc to income.</th>
     <th>Low</th>
-    <th>Planning</th>
+    <th>Done</th>
  </tr>
  
   <tr>
     <th>- Add multiple income cards.</th>
     <th>high</th>
-    <th>Planning</th>
+    <th>Done</th>
  </tr>
  <tr>
     <th>- Make income collapsable</th>
     <th>Medium</th>
-    <th>In Progress</th>
+    <th>Done</th>
  </tr>
  
 <tr>
