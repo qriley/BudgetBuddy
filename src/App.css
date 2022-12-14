@@ -130,7 +130,7 @@
 }
 
 .incomeTotalCard {
-    height: 100px;
+    height: 70px;
     background-color: rgb(233, 196, 106);
     margin: 2%;
     padding: 20px;
@@ -140,7 +140,7 @@
 
 .incomeSplitCard {
     height: 40px;
-    background-color: rgb(42, 124, 157);
+    background-color: #fff;
     padding: 6px;
     border-radius: 10px;
     outline-color: #282c34;
