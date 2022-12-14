@@ -26,9 +26,10 @@ class IncomeComponent extends React.Component {
         if (inputVal === '' || re.test(inputVal)) {
             var totOverType = (inputVal / this.state.type)
             var adder = Number(totOverType).toFixed(2)
-            this.setState({ income: adder });
+            
 
-            this.props.incomeFunction(adder);
+            this.props.incomeFunction(adder - this.state.income);
+            this.setState({ income: adder });
         }
         //document.getElementsByClassName("incomeTotalDisplay")[0].innerHTML = this.state.income;
 
@@ -58,6 +59,13 @@ class IncomeComponent extends React.Component {
     closedChecker = () => {
         var changeClosed = !this.state.isClosed;
         this.setState({ isClosed: changeClosed });
+    }
+
+    handleClose = () => {
+        this.setState({
+            hidden: true
+        });
+        this.props.incomeFunction(Number(-this.state.income));
     }
 
     render() {
