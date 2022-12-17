@@ -90,13 +90,13 @@ class IncomeComponent extends React.Component {
                                 value={this.state.amount}
                                 onChange={this.myIncome2Handler2}
                             />
-                            <select className="form-control input-sm" defaultValue="2" onChange={this.perMonthHandler}>
+                            <select className="form-select form-control " defaultValue="2" onChange={this.perMonthHandler}>
                                 <option value="1">Salary</option>
                                 <option value="2">Monthly</option>
                                 <option value="3">Weekly</option>
                                 <option value="4">Hourly (40 Hrs)</option>
                             </select>
-                            <button className="form-control input-sm" onClick={this.myIncomeHandler}>Confirm</button>
+                            <button className="btn btn-sm btn-outline-light form-control" onClick={this.myIncomeHandler}>Confirm</button>
                         </div>
                         <br />
                         <input className="form-control input-sm"

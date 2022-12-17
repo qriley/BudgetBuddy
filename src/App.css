@@ -74,6 +74,10 @@ svg {
     svg:hover {
         opacity:100%;
     }
+
+.form-control {
+    margin:.5rem;
+}
 .mainContent {
   background-color: #bbb;
   height: 100%;
