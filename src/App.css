@@ -5,6 +5,7 @@
 svg {
     height: 100%;
     width: 100%;
+    opacity: 50%;
 }
 .App {
     text-align: center;
@@ -54,7 +55,9 @@ svg {
     border-radius: 15px;
     text-align: center;
     font-size: x-large;
-    margin:10px;
+    margin: 10px;
+
+    border: none;
 }
 
 .addButton2 {
@@ -65,8 +68,16 @@ svg {
     text-align: center;
     font-size: x-large;
     margin: 10px;
-}
 
+    border: none;
+}
+    svg:hover {
+        opacity:100%;
+    }
+
+.form-control {
+    margin:.5rem;
+}
 .mainContent {
   background-color: #bbb;
   height: 100%;
@@ -97,7 +108,7 @@ svg {
 }
 
 .incomeCard {
-    height: 315px;
+    height: auto;
     background-color: rgb(77, 212, 106);
     margin: 2%;
     padding: 20px;
@@ -114,7 +125,7 @@ svg {
 
 .expenseCard{
 
-  height: 315px;
+  height: auto;
   background-color: rgb(212, 77, 77);
   margin: 2%;
   padding: 20px;

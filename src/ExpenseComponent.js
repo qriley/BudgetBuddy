@@ -87,13 +87,13 @@ class ExpenseComponent extends React.Component {
                                 placeholder="Amount"
                                 value={this.state.expense}
                                 />
-                                <select className="form-control input-sm" defaultValue="1" onChange={this.perMonthHandler}>
+                            <select className="form-select form-control " defaultValue="1" onChange={this.perMonthHandler}>
                                     <option value="12">Yearly</option>
                                     <option value="1">Monthly</option>
                                     <option value="4">Weekly</option>
                                     <option value="30">Daily</option>
                                 </select>
-                                <button className="form-control input-sm" onClick={this.totalCalculator}>Confirm</button>
+                            <button className="btn btn-sm btn-outline-light form-control" onClick={this.totalCalculator}>Confirm</button>
                             </div>
                             <br />
                         <input className="form-control input-sm"
