@@ -5,7 +5,6 @@
 svg {
     height: 100%;
     width: 100%;
-    opacity: 50%;
 }
 .App {
     text-align: center;
@@ -71,7 +70,10 @@ svg {
 
     border: none;
 }
-    svg:hover {
+    .addsvg {
+        opacity:50%;
+    }
+    .addsvg:hover {
         opacity:100%;
     }
 
@@ -169,4 +171,8 @@ svg {
 
 .percentSlider {
     margin: 2%;
+}
+.plus {
+    height: 100%;
+    width:100%;
 }

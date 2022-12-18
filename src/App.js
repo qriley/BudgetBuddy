@@ -115,10 +115,10 @@ class App extends Component {
                             </div>
                             <div className="d-flex justify-content-center">
                                 <button className="addButton" onClick={this.addComponent}>
-                                    <FaPlus />
+                                    <FaPlus className="addsvg"/>
                                 </button>
                                 <button className="addButton2" onClick={this.addComponent2}>
-                                    <FaPlus/>
+                                    <FaPlus className="addsvg"/>
                                 </button>
                                 </div>
                             <div className="incomeTotalCard d-flex justify-content-center">
