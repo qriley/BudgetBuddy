@@ -71,10 +71,10 @@ svg {
     border: none;
 }
     .addsvg {
-        opacity:50%;
+        opacity:0.50;
     }
     .addsvg:hover {
-        opacity:100%;
+        opacity:1.00;
     }
 
 .form-control {
