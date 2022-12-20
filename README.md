@@ -62,9 +62,9 @@ See the live site at <a href="http://budgetbuddy.finance">BudgetBuddy.finance</a
     <th>Not Started</th>
   </tr>
   <tr>
-    <th>- add animation on card add</th>
+    <th>- add animations</th>
     <th>normal</th>
-    <th>Not Started</th>
+    <th>in progress</th>
  </tr>
 <tr>
   <th>Sliders fail on mobile: do not react to touch screen! Cannot adjust</th>
