@@ -70,13 +70,20 @@ svg {
 
     border: none;
 }
-    .addsvg {
-        opacity:0.50;
-    }
-    .addsvg:hover {
-        opacity:1.00;
-    }
+.addsvg {
+    opacity:0.50;
+}
+.addsvg:hover {
+    opacity:1.00;
+}
+.example-appear {
+    opacity: 0.04;
+}
 
+.example-appear.example-appear-active {
+    opacity: 2;
+    transition: opacity 50s ease-in;
+}
 .form-control {
     margin:.5rem;
 }

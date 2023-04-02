@@ -2,6 +2,7 @@ import React from 'react';
 import App from './App.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CloseButton from 'react-bootstrap/CloseButton';
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 class ExpenseComponent extends React.Component {
     constructor(props) {
@@ -120,10 +121,16 @@ class ExpenseComponent extends React.Component {
             }
         } else { card = null; }
 
-            return (
-            <div>
-                { card }
-            </div>    
+        return (
+                <ReactCSSTransitionGroup transitionName = "example"
+               transitionAppear = {true} transitionAppearTimeout = {500}
+               transitionEnter = {false} transitionLeave = {false}>
+					
+                <div>
+                    {card}
+                </div>
+            </ReactCSSTransitionGroup>
+ 
                 );
            
     }
