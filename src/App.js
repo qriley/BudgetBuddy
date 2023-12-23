@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import IncomeComp from './IncomeComponent.js'
 import ExpenseComp from './ExpenseComponent.js'
+import DebtComp from './CreditComponent.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -17,11 +18,14 @@ class App extends Component {
         this.state = {
             income: .00,
             expense: .00,
+            debt: .00,
             total: .00,
             components: 1,
             components2: 1,
+            components3: 1,
             rows: [<ExpenseComp className="span10" key={this.components} totalFunction={this.updateTotal} />],
             rows2: [<IncomeComp key={this.components2} incomeFunction={this.incomeTotal} />],
+            rows3: [<DebtComp key={this.components3} debtFunction={this.debtTotal} />],
             recPay: .00,
             debtPay: .00,
             investPay: .00,
@@ -86,6 +90,19 @@ class App extends Component {
 
         this.setState({ rows2: tempRows2 });
     }
+    addComponent3 = () => {
+
+        this.setState({ components3: this.state.components3++ });
+        var tempRows3 = this.state.rows3
+
+
+
+        // note: we are adding a key prop here to allow react to uniquely identify each
+        // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
+        tempRows3.push(<DebtComp key={this.components3} debtFunction={this.debtTotal} />);
+
+        this.setState({ rows3: tempRows3 });
+    }
 
     processPercents = () => {
         this.state.example.forEach((el) => {
@@ -110,6 +127,10 @@ class App extends Component {
 
                             </div>
                             <div className="additionalCards">
+                                {this.state.rows3}
+
+                            </div>
+                            <div className="additionalCards">
                                 {this.state.rows}
 
                             </div>
@@ -118,6 +139,9 @@ class App extends Component {
                                     <FaPlus className="addsvg"/>
                                 </button>
                                 <button className="addButton2" onClick={this.addComponent2}>
+                                    <FaPlus className="addsvg"/>
+                                </button>
+                                <button className="addButton3" onClick={this.addComponent3}>
                                     <FaPlus className="addsvg"/>
                                 </button>
                                 </div>
