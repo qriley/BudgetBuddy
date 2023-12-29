@@ -8,10 +8,12 @@ class CreditComponent extends React.Component {
         super(props);
         this.state = {
             expense: null,
-            rate: 0.0,
-            principle: 0.00,
-            numOfMonths: 12,
-            total: 0.00,
+            rate: null,
+            ratePercent: null,
+            principle: null,
+            numOfYears: null,
+            numOfMonths: null,
+            total: null,
             title: "-",
             title2: null,
             isClosed: false,
@@ -20,27 +22,46 @@ class CreditComponent extends React.Component {
         //this.totalFunction = props.totalFunction;
     }
 
-    myExpenseHandler = (event) => {
-        this.setState({ expense: event.target.value });
+    principleHandler = (event) => {
+        this.setState({ principle: event.target.value });
     }
 
     rateHandler = (event) => {
+        if(event.target.value!=null){
         var interest = parseInt(event.target.value);
         var trueInterest = interest * .01;
-        this.setState({ rate: trueInterest });
+        this.setState({ 
+            rate: trueInterest,
+            ratePercent: interest
+        });
+    }
+
+    }
+
+    monthHandler = (event) => {
+        var length = parseInt(event.target.value);
+        var trueYears = length/12;
+        this.setState({
+             numOfYears: trueYears,
+         });
 
     }
 
     totalCalculator = (event) => {
+        console.log("Hit1")
         event.preventDefault();
-        var calculateTotal = (this.state.expense * this.state.perMonth).toFixed(2);
+        var calculateTotal = (this.state.principle * (1+this.state.rate)^this.state.numOfYears);
         var oldVal = this.state.total
         const re = /^[0-9\b]+$/;
+        console.log(calculateTotal)
+
         if ((this.state.expense === '' || re.test(this.state.expense))
             && calculateTotal != this.state.total) {
-
+            
+                console.log(calculateTotal)
             this.setState({
-                total: calculateTotal
+                total: calculateTotal,
+                expense: calculateTotal/this.state.numOfMonths
             });
             this.props.totalFunction(Number(calculateTotal - oldVal));
         }
@@ -76,19 +97,25 @@ class CreditComponent extends React.Component {
                             <p />
                         </div>
                         <form>
-                            <h3>This will cost:</h3>
+                            <h3>Loan/Debt Expense</h3>
                             <div className="d-flex justify-content-center">
                                 <input className="form-control input-sm"
                                     type='text'
-                                    onChange={this.myExpenseHandler}
+                                    onChange={this.principleHandler}
                                     placeholder="Amount"
-                                    value={this.state.expense}
+                                    value={this.state.principle}
                                 />
-                                <input className="form-select form-control "
+                                <input className="input-sm form-control "
                                     type='text'
                                     onChange={this.rateHandler}
-                                    placeholder="Rate"
-                                    value={this.state.rate}
+                                    placeholder="Rate in percent"
+                                    value={this.state.ratePercent}
+                                />
+                                <input className="input-sm form-control "
+                                    type='text'
+                                    onChange={this.monthHandler}
+                                    placeholder="Loan Length in Months"
+                                    value={this.state.numOfMonths}
                                 />
                                 <button className="btn btn-sm btn-outline-light form-control" onClick={this.totalCalculator}>Confirm</button>
                             </div>
@@ -100,8 +127,12 @@ class CreditComponent extends React.Component {
                                 value={this.state.title2}
                             />
                         </form>
-                        Approximate cost per month:
+                        Approximate cost total:
                         <h3 id="totalCost">${this.state.total}</h3>
+                        Approximate cost per month:
+                        <h3 id="totalCost">${this.state.expense}</h3>
+                        Approximate interest:
+                        <h3 id="totalCost">${this.state.total - this.state.principle}</h3>
                         <button onClick={() => this.closedChecker()} type="button" className="btn btn-sm btn-outline-light">Collapse</button>
                     </div>;
             } else {
@@ -111,7 +142,9 @@ class CreditComponent extends React.Component {
                             <CloseButton onClick={this.handleClose} />
                             <span className="col">{this.state.title}</span>
                             <button onClick={() => this.closedChecker()} className="btn btn-sm btn-outline-light" >Expand</button>
-                            <span id="totalCost" type="button" className="col">${this.state.total}</span>
+                            <span id="totalCost" type="button" className="col">Total Cost: ${this.state.total}</span>
+                            <span id="totalCost" type="button" className="col">Monthly Cost: ${this.state.expense}</span>
+                            <span id="totalCost" type="button" className="col">Total interest: ${this.state.expense - this.state.total}</span>
                         </div>
                     </div>;
             }
