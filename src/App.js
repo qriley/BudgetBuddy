@@ -64,6 +64,18 @@ class App extends Component {
         this.setState({ income: tempIncome, total: tot })
         
     }
+
+    debtTotal = (toAdd) => {
+        var ex = Number(this.state.expense) + Number(toAdd)
+
+        this.setState({ expense: ex });
+
+        var tot = Number(this.state.income) - Number(ex)
+
+        this.setState({ total: tot })
+        
+    }
+
     addComponent = () => {
 
         this.setState({ components: this.state.components++ });
