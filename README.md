@@ -53,8 +53,8 @@ See the live site at <a href="http://budgetbuddy.finance">BudgetBuddy.finance</a
   </tr>
     <tr>
     <th>- Add debt bucket, with interest</th>
-    <th>low</th>
-    <th>Not Started</th>
+    <th>Med</th>
+    <th>In Progress</th>
   </tr>
   <tr>
     <th>- accurate tax calculations</th>
